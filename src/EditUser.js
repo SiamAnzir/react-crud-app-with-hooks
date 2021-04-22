@@ -31,7 +31,7 @@ const EditUser = (props) => {
                     <Form.Control name="occupation" required type="text" value={updatedUser.occupation} onChange={handleInputChange}/>
                 </Col>
                 <Col>
-                    <Form.Control name="contactNo" required type="text" value={updatedUser.contactNo} onChange={handleInputChange}/>
+                    <Form.Control name="contactNo" required type="number" value={updatedUser.contactNo} onChange={handleInputChange}/>
                 </Col>
                 <Col>
                     <Button variant="success" type="submit">Update User</Button>   <Button variant="danger" onClick={() => props.setEditing(false)}> Cancel </Button>
