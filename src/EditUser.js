@@ -1,8 +1,15 @@
-import React,{useState} from "react";
+import React,{useState , useEffect } from "react";
 import {Button, Form, Row , Col} from "react-bootstrap";
 
 const EditUser = (props) => {
     const [ updatedUser, setUser ] = useState(props.currentUser);
+
+    useEffect(
+        () => {
+          setUser(props.currentUser)
+        },
+        [props]
+    )
 
     const handleInputChange = (event) => {
         const {name, value} = event.target;
